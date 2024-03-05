@@ -45,3 +45,56 @@ O sistema simula um processo de alfândega, onde produtos importados precisam se
         Forneça o nome, preço e informações adicionais conforme solicitado.
     Para produtos importados, forneça a taxa de alfândega.
     Após o cadastro de todos os produtos, o sistema exibirá as etiquetas de preço correspondentes.
+
+
+<br><br><br><br>
+
+
+# Customs System with Advanced Object-Oriented Concepts
+
+![image](https://github.com/GMN-dev/CustomsSystem/assets/84913052/2db165a0-a314-4c41-b3c2-a1d23cabff74)
+
+This project is a customs system developed in Java, which employs the principles of object-oriented programming (OOP), including inheritance, polymorphism, and overriding. It allows the user to register common products, used products, and imported products, providing specific information for each type of product, such as customs duty for imported products. The system generates corresponding price tags and displays them to the user.
+
+## Description
+
+The system simulates a customs process, where imported products need to be registered with the corresponding customs duty. Additionally, it allows the registration of used products, providing the manufacturing date as additional information. This practical application of OOP concepts includes:
+
+- **Inheritance:** Extending classes to create product hierarchies, such as the `UsedProduct` and `ImportedProduct` classes that inherit from the base `Product` class.
+
+- **Polymorphism:** Utilization of polymorphic methods to provide different behaviors for each type of product, such as overriding the `priceTag()` method.
+
+- **Overriding:** Overriding methods to adapt behavior according to the specific class, such as implementing the `priceTag()` method in each product class.
+
+## Features
+
+- Registering common, used, and imported products.
+- Recording customs duty for imported products.
+- Displaying price tags for each registered product, including additional information when applicable.
+
+## Implementation Details
+
+- **Product:** Abstract class representing a generic product. It has common attributes such as name and price, and methods to calculate the total price of the product and generate the price tag.
+
+- **UsedProduct:** Class representing a used product, which inherits from `Product`. In addition to the attributes of `Product`, it has an additional attribute for the manufacturing date and overrides the `priceTag()` method to include information about the product's condition.
+
+- **ImportedProduct:** Class representing an imported product, which inherits from `Product`. In addition to the attributes of `Product`, it has an additional attribute for customs duty and overrides the `priceTag()` method to include information about the customs duty.
+
+## Technologies Used
+
+- Programming Language: Java
+- Date and Time Library: java.time.LocalDate
+- Date Formatting: java.time.format.DateTimeFormatter
+- Input Handling: java.util.Scanner
+- Data Structure: java.util.ArrayList
+- OOP Concepts: Inheritance, Polymorphism, Overriding
+
+## How to Use
+
+1. Run the Main.java file.
+2. Enter the number of products you want to register.
+3. For each product, follow the instructions provided by the system:
+   - Choose to register a common, used, or imported product.
+   - Provide the name, price, and additional information as requested.
+4. For imported products, provide the customs duty.
+5. After registering all products, the system will display the corresponding price tags.
